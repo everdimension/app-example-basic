@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Classes } from '@blueprintjs/core';
 import { Colors } from '@blueprintjs/core';
 import { MenuItem } from '@blueprintjs/core';
-import { Slot } from '@wordpress/components';
 import { Route } from 'react-router-dom';
 import { UNIT } from '../styles.js';
 
@@ -59,7 +58,6 @@ export function Sidenav({ theme }) {
                 history.push(event.currentTarget.pathname);
               }}
             />
-            <Slot name="navigation" />
           </ul>
         )}
       />
