@@ -27,6 +27,7 @@ export function Settings() {
         <ShortcutSwitch label="Feed" shortcut="ctrl+H" />
         <ShortcutSwitch label="Editor" shortcut="ctrl+E" />
         <ShortcutSwitch label="Followers" shortcut="ctrl+F" />
+        <ShortcutSwitch label="Messages" shortcut="ctrl+M" />
       </div>
     </Page>
   );

@@ -58,6 +58,15 @@ export function Sidenav({ theme }) {
                 history.push(event.currentTarget.pathname);
               }}
             />
+            <MenuItem
+              text="Messages"
+              icon="chat"
+              href="/messages"
+              onClick={event => {
+                event.preventDefault();
+                history.push(event.currentTarget.pathname);
+              }}
+            />
           </ul>
         )}
       />

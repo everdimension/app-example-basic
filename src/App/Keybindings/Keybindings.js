@@ -33,6 +33,14 @@ export function Keybindings({ theme, onSetTheme }) {
           </>
         )}
       />
+      <Route
+        render={({ history }) => (
+          <Keybinding
+            combo="ctrl+m"
+            onKeyDown={() => history.push('/messages')}
+          />
+        )}
+      />
     </>
   );
 }

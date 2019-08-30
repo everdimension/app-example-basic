@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button } from '@blueprintjs/core';
+import { Tag } from '@blueprintjs/core';
+import { Route } from 'react-router-dom';
 import { Popover, PopoverInteractionKind } from '@blueprintjs/core';
 import { Menu, MenuItem } from '@blueprintjs/core';
 import { Navbar, Alignment } from '@blueprintjs/core';
@@ -19,6 +21,20 @@ export function NavigationBar() {
           hoverOpenDelay={0}
           content={
             <Menu>
+              <Route
+                render={({ history }) => (
+                  <MenuItem
+                    text="Messages"
+                    labelElement={<Tag intent="primary">13</Tag>}
+                    icon="chat"
+                    href="/messages"
+                    onClick={event => {
+                      event.preventDefault();
+                      history.push(event.currentTarget.pathname);
+                    }}
+                  />
+                )}
+              />
               <MenuItem text="logout" icon="log-out" />
             </Menu>
           }
